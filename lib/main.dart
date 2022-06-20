@@ -6,6 +6,7 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
 import 'package:testui/fav.dart';
 import 'package:testui/wallet.dart';
+import 'Views/Register/Register.dart';
 import 'stateful_dialog.dart';
 
 void main() {
@@ -19,12 +20,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.orange,
         primaryColorDark: Colors.white,
       ),
-      home: const BuySellPage(title: 'Flutter Demo Home Page', code: 'asels'),
+      home: Register(),
     );
   }
 }
