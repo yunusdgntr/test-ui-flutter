@@ -33,4 +33,9 @@ class SpecialText {
     return GoogleFonts.rubik(
         fontSize: fontSize, fontWeight: fontWeight, color: color);
   }
+
+  TextStyle getKanik(double? fontSize, FontWeight? fontWeight, Color? color) {
+    return GoogleFonts.kanit(
+        fontSize: fontSize, fontWeight: fontWeight, color: color);
+  }
 }

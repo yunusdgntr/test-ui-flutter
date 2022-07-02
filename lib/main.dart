@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
+import 'package:testui/Views/Login/Login.dart';
 import 'package:testui/fav.dart';
 import 'package:testui/wallet.dart';
 import 'Views/Register/Register.dart';
@@ -23,10 +24,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        primaryColor: Colors.orange,
         primarySwatch: Colors.orange,
         primaryColorDark: Colors.white,
       ),
-      home: Register(),
+      home: Login(),
     );
   }
 }

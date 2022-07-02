@@ -1,28 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:testui/Views/Login/Login.dart';
-import 'package:testui/Views/Register/service/RegisterService.dart';
+import 'package:testui/Views/ForgetPassword/RecoveryPassword.dart';
 
 import '../../Core/Constants/AppColor.dart';
 import '../../Core/Constants/SpecialText.dart';
 import '../../Core/Widgets/AppButton.dart';
-import '../../Core/Widgets/InputPassWidget.dart';
 import '../../Core/Widgets/InputWidget.dart';
+import '../Login/Login.dart';
 
-class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
-
+class ForgetPassword extends StatefulWidget {
   @override
-  State<Register> createState() => _RegisterState();
+  State<ForgetPassword> createState() => _ForgetPasswordState();
 }
 
-class _RegisterState extends State<Register> {
+class _ForgetPasswordState extends State<ForgetPassword> {
   late TextEditingController userNameController;
   late TextEditingController fullNameController;
   late TextEditingController mailController;
   late TextEditingController passwordController;
-  int activeIndex = 0;
-
   @override
   void initState() {
     super.initState();
@@ -37,36 +31,22 @@ class _RegisterState extends State<Register> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(25),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
                   height: 10,
                 ),
-                // Image.asset('assets/images/createaccount.png'),
-                SizedBox(
-                  height: 10,
-                ),
+                Image.asset('assets/images/welcomevectorlogo.png'),
                 Text(
-                  'CreateAccount',
-                  style: SpecialText().getMainHeader(
-                      25, FontWeight.bold, AppColors.darkThemeShadowColor),
+                  'ForgetPassword',
+                  style: SpecialText()
+                      .getMainHeader(25, FontWeight.bold, AppColors.accent),
                 ),
                 SizedBox(
                   height: 40,
                 ),
-                InputWidget(
-                    topLabel: 'UserName',
-                    hintText: 'Username',
-                    textEditingController: userNameController),
-                SizedBox(
-                  height: 10,
-                ),
-                InputWidget(
-                    topLabel: 'FullName',
-                    hintText: 'FullName',
-                    textEditingController: fullNameController),
                 SizedBox(
                   height: 10,
                 ),
@@ -75,26 +55,15 @@ class _RegisterState extends State<Register> {
                     hintText: 'Email',
                     textEditingController: mailController),
                 SizedBox(
-                  height: 10,
-                ),
-                InputPassWidget(
-                    topLabel: 'Password',
-                    hintText: 'Password',
-                    textEditingController: passwordController),
-                SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 AppButton(
                   height: 50,
                   type: ButtonType.PRIMARY,
+                  onPressed: () async {},
+                  text: 'Send',
                   buttonTextColor: Colors.black,
-                  onPressed: () async {
-                    var service = RegisterService();
-                    var result = await service.registerUser('username', '', '');
-                  },
-                  text: 'Save',
                 ),
-
                 SizedBox(
                   height: 50,
                 ),
@@ -106,10 +75,11 @@ class _RegisterState extends State<Register> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (BuildContext context) => Login()));
+                                builder: (BuildContext context) =>
+                                    RecoveryPassword()));
                       },
                       child: Text(
-                        "ZatenHesabımVar",
+                        "Giriş Yap",
                         textAlign: TextAlign.right,
                         style: SpecialText()
                             .getDidact(20, FontWeight.bold, AppColors.accent),
