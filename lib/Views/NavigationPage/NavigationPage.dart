@@ -57,15 +57,15 @@ class _NavigationpageState extends State<Navigationpage> {
               color: activeIndex == 0
                   ? Colors.white
                   : Color.fromARGB(255, 105, 108, 114)),
-          SvgPicture.asset('assets/icons/mapicon.svg',
+          SvgPicture.asset('assets/icons/portfolio.svg',
               width: 30,
               height: 30,
               color: activeIndex == 1 ? Colors.white : Color(0xFFC8C9CB)),
-          SvgPicture.asset('assets/icons/add-circle.svg',
+          SvgPicture.asset('assets/icons/favorite.svg',
               width: 30,
               height: 30,
               color: activeIndex == 2 ? Colors.white : Color(0xFFC8C9CB)),
-          SvgPicture.asset('assets/icons/add-circle.svg',
+          SvgPicture.asset('assets/icons/wallet.svg',
               width: 30,
               height: 30,
               color: activeIndex == 3 ? Colors.white : Color(0xFFC8C9CB)),
