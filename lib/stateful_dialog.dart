@@ -23,9 +23,6 @@ class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Second Route"),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

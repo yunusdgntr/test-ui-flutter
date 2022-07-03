@@ -57,7 +57,9 @@ class _DrawerWidgetState extends State<DrawerWidget> {
     return Drawer(
       backgroundColor: Colors.orange,
       child: SingleChildScrollView(
+        padding: EdgeInsets.all(8),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(
               height: 30,
@@ -67,7 +69,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   height: 142,
                   width: MediaQuery.of(context).size.width,
                   child: Image.asset(
-                    "assets/images/findmycarlogo.jpeg",
+                    "assets/images/welcomevectorlogo.png",
                   )),
               decoration: BoxDecoration(
                 color: Colors.transparent,
@@ -87,7 +89,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 'CostTimeLine',
                 style: TextStyle(
                     fontFamily: 'Avenir',
-                    fontSize: 24,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.accent),
                 textAlign: TextAlign.center,
@@ -102,7 +104,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 'Support',
                 style: TextStyle(
                     fontFamily: 'Avenir',
-                    fontSize: 24,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.accent),
                 textAlign: TextAlign.center,
@@ -117,7 +119,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 'Contact',
                 style: TextStyle(
                     fontFamily: 'Avenir',
-                    fontSize: 24,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.accent),
                 textAlign: TextAlign.center,

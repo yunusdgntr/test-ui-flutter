@@ -6,10 +6,10 @@ import 'package:testui/Core/Constants/SpecialText.dart';
 import 'package:testui/Core/Widgets/DrawerWidget.dart';
 import 'package:testui/Views/ForgetPassword/ForgetPassword.dart';
 import 'package:testui/Views/Home/Home.dart';
-import 'package:testui/Views/Login/Login.dart';
 
-import '../../Core/Constants/AppColor.dart';
-import '../Register/Register.dart';
+import '../../fav.dart';
+import '../../stateful_dialog.dart';
+import '../../wallet.dart';
 
 class Navigationpage extends StatefulWidget {
   const Navigationpage({Key? key}) : super(key: key);
@@ -85,12 +85,12 @@ class _NavigationpageState extends State<Navigationpage> {
       case 0:
         return Home();
       case 1:
-        return Login();
+        return TrackList();
 
       case 2:
-        return Register();
+        return Wallet();
       default:
-        return ForgetPassword();
+        return Portfolio();
     }
   }
 }
