@@ -44,6 +44,8 @@ dependencies:
   dio: ^4.0.6
   curved_navigation_bar: ^1.0.3
   flutter_svg: ^0.22.0
+  timelines: ^0.1.0
+  lottie: ^1.2.1
 
 dev_dependencies:
   flutter_test:

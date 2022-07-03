@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:testui/Views/GeneralStatus/GeneralStatus.dart';
 // import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import '../../Views/History/History.dart';
 import '../Constants/AppColor.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -87,6 +89,46 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               },
               child: Text(
                 'CostTimeLine',
+                style: TextStyle(
+                    fontFamily: 'Avenir',
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.accent),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 45,
+            ),
+            GestureDetector(
+              onTap: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GeneralStatus()),
+                );
+              },
+              child: Text(
+                'GeneralStatus',
+                style: TextStyle(
+                    fontFamily: 'Avenir',
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.accent),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 45,
+            ),
+            GestureDetector(
+              onTap: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => History()),
+                );
+              },
+              child: Text(
+                'History',
                 style: TextStyle(
                     fontFamily: 'Avenir',
                     fontSize: 18,

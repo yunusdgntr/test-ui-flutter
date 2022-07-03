@@ -54,9 +54,7 @@ class _NavigationpageState extends State<Navigationpage> {
           SvgPicture.asset('assets/icons/home2.svg',
               width: 30,
               height: 30,
-              color: activeIndex == 0
-                  ? Colors.white
-                  : Color.fromARGB(255, 105, 108, 114)),
+              color: activeIndex == 0 ? Colors.white : Color(0xFFC8C9CB)),
           SvgPicture.asset('assets/icons/portfolio.svg',
               width: 30,
               height: 30,

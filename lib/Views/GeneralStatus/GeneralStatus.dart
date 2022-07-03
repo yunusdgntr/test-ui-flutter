@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../../Core/Constants/AppColor.dart';
 import '../../Core/Constants/SpecialText.dart';
 import '../../Core/Widgets/AppButton.dart';
 import '../../Core/Widgets/InputWidget.dart';
+import '../../count_up.dart';
 
 class GeneralStatus extends StatefulWidget {
   @override
@@ -26,19 +28,26 @@ class _GeneralStatusState extends State<GeneralStatus> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'General Status',
+          style: SpecialText().getKanik(25, FontWeight.bold, Colors.white),
+        ),
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+      ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(25),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 10,
-                ),
-                Image.asset('assets/images/welcomevectorlogo.png'),
-              ],
-            ),
+          padding: EdgeInsets.all(8),
+          child: ListView.builder(
+            itemBuilder: (BuildContext context, int index) {
+              return StatusCard('BASLIK', 15064242.5, '₺');
+            },
+            itemCount: 10,
           ),
         ),
       ),
@@ -130,6 +139,45 @@ class _GeneralStatusState extends State<GeneralStatus> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class StatusCard extends StatelessWidget {
+  String title;
+  double number;
+  String suffix;
+
+  StatusCard(this.title, this.number, this.suffix);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10,
+      child: Container(
+        child: Column(children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              title,
+              style: SpecialText().getKanik(20, null, Colors.black),
+            ),
+          ),
+          Countup(
+            begin: 0.1,
+            precision: 2,
+            suffix: ' ' + suffix,
+            end: number,
+            duration: const Duration(seconds: 1),
+            separator: '',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.black.withOpacity(0.8),
+            ),
+          )
+        ]),
       ),
     );
   }

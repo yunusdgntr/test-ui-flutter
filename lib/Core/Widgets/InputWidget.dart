@@ -41,7 +41,6 @@ class InputWidget extends StatelessWidget {
           child: TextFormField(
             controller: textEditingController,
             obscureText: this.obscureText,
-            autofocus: true,
             maxLength: maxLenght,
             decoration: InputDecoration(
               // ignore: unnecessary_null_comparison
@@ -57,7 +56,7 @@ class InputWidget extends StatelessWidget {
                   color: AppColors.primaryYellow,
                 ),
               ),
-              // hintText: this.hintText,
+              hintText: this.hintText,
 
               hintStyle: TextStyle(
                 fontSize: 14.0,

@@ -1,6 +1,6 @@
 class Ticker {
   String? tickerCode;
-  int? price;
+  double? price;
   double? change;
   int? volume;
   String? tickerName;
