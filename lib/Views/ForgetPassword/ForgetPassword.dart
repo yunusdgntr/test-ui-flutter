@@ -5,7 +5,6 @@ import '../../Core/Constants/AppColor.dart';
 import '../../Core/Constants/SpecialText.dart';
 import '../../Core/Widgets/AppButton.dart';
 import '../../Core/Widgets/InputWidget.dart';
-import '../Login/Login.dart';
 
 class ForgetPassword extends StatefulWidget {
   @override

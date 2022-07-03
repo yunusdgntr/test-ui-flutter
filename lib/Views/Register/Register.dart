@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:testui/Views/Login/Login.dart';
 import 'package:testui/Views/Register/service/RegisterService.dart';
